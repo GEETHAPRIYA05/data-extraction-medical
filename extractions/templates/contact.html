@@ -157,6 +157,7 @@
       {% csrf_token %}
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
@@ -170,16 +171,17 @@
 <!-- SweetAlert popup for success -->
 {% if messages %}
   <script>
-    {% for message in messages %}
+   
       Swal.fire({
         icon: 'success',
         title: 'Message Sent!',
-        text: '{{ message }}',
+        text: '{{ message|escapejs }}',
         confirmButtonColor: '#004aad'
       });
-    {% endfor %}
+   
   </script>
 {% endif %}
+
 
 </body>
 </html>
