@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 urlpatterns = [
     path('', views.splash_view, name='splash'),
      path('login/', views.login_view, name='login'),
-     path('', views.index_view, name='index'),  # Home page
      path('about/', views.about, name='about'),
     path('register/', views.register_view, name='register'),
     path('password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
@@ -35,20 +34,14 @@ urlpatterns = [
     path('prescriptions/', views.prescription_form, name='prescriptions'),
     path('view_prescriptions/', views.view_prescriptions, name='view_prescriptions'),
     path('prescription/<int:pk>/pdf/', views.prescription_pdf, name='prescription_pdf'),
-     path('case-studies/', views.case_studies, name='case_studies'),
     path('add-case-study/', views.add_case_study, name='add_case_study'), path('edit-case-study/<int:pk>/', views.edit_case_study, name='edit_case_study'),
     path('delete-case-study/<int:pk>/', views.delete_case_study, name='delete_case_study'),
-    path('doctor-schedule/', views.doctor_schedule, name='doctor_schedule'),
     path('add-schedule/', views.add_doctor_schedule, name='add_doctor_schedule'),
-    path('edit-schedule/<int:id>/', views.edit_doctor_schedule, name='edit_doctor_schedule'),
+    path('edit-schedule/<int:id>/', views.edit_doctor_schedule, name='edit_doctor_schedule'),                                               
     path('delete-schedule/<int:id>/', views.delete_doctor_schedule, name='delete_doctor_schedule'),
-    path('report/', views.report_view, name='report'),
     path('logout/', views.logout_view, name='logout'),
     path('send_chat_message/', views.send_chat_message, name='send_chat_message'),
     path('contact/', views.contact_view, name='contact'),
     path('delete/<int:id>/', views.delete_prescription, name='delete_prescription'),
-
-
-
 
 ]
