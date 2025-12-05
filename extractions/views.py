@@ -7,7 +7,6 @@ from django.db.models import Q
 from django.template.loader import render_to_string, get_template
 from django.contrib.auth.models import User
 from django.utils import timezone
-
 from .models import Patient, Appointment, Staff, Prescription, CaseStudy, DoctorSchedule
 from django.shortcuts import render, redirect
 from .forms import CaseStudyForm

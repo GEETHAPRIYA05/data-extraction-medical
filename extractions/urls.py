@@ -43,5 +43,5 @@ urlpatterns = [
     path('send_chat_message/', views.send_chat_message, name='send_chat_message'),
     path('contact/', views.contact_view, name='contact'),
     path('delete/<int:id>/', views.delete_prescription, name='delete_prescription'),
-
+    
 ]
